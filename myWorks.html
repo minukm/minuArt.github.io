@@ -102,7 +102,7 @@
 				<div class="col-md-20 col-xs-16">
 						<div class="look col-md-8 col-xs-24 xs-pt-20 xs-p-0">
 								<a href="#" class="image1 images_drawing">
-									<img width="100%;" id="1" data-toggle="modal" data-target="#myImageModal" src="images/photography/DSC02446.JPG" alt="image is here" />
+									<img width="100%;" id="1" data-toggle="modal" data-target="#myImageModal" src="images/photography/DSC01846.JPG" alt="image is here" />
 								</a>
 						</div>
 						<div class="look col-md-8 col-xs-24 xs-pt-20 xs-p-0">
@@ -177,7 +177,7 @@
 						</div>
 						<div class="look col-md-8 col-xs-24 xs-pt-20 xs-p-0">
 								<a href="#" class="image1 images_drawing">
-									<img width="100%;" id="3" data-toggle="modal" data-target="#myImageModal" src="images/photography/DSC01846.JPG" alt="image is here" />
+									<img width="100%;" id="3" data-toggle="modal" data-target="#myImageModal" src="images/photography/DSC05898.JPG" alt="image is here" />
 								</a>
 						</div>
 				</div>
@@ -221,7 +221,7 @@
 						</div>
 						<div class="look col-md-8 col-xs-24 xs-pt-20 xs-p-0">
 								<a href="#" class="image2 images_drawing">
-									<img width="100%;" id="3" data-toggle="modal" data-target="#myImageModal" src="images/photography/DSC06029.jpg" alt="image is here" />
+									<img width="100%;" id="3" data-toggle="modal" data-target="#myImageModal" src="images/photography/DSC06029.JPG" alt="image is here" />
 								</a>
 						</div>
 				</div>
@@ -458,7 +458,8 @@
 <script>
 // Image open on bootstrap modal
 $(document).ready(function () {
-    $('img').on('click', function () {
+    $('img').on('click', function (e) {
+			 e.preventDefault();
         var image = $(this).attr('src');
         //alert(image);
         $('#myImageModal').on('show.bs.modal', function () {
