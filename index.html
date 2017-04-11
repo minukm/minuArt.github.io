@@ -72,15 +72,48 @@
                   <div class="col-md-24 xs-pt-70 xs-pb-70 sections" id="projects">
                       <div class="col-md-2"></div>
                       <div class="col-md-12">
-                          <div class="projects_me">
-                            <h2>Project Works</h2>
-                              We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <div class="projects_me">
+                          <h2>Project Works</h2>
+                          <div>
+                            <h3><b>Virtual Reality App</b>-At Deloitte</h3>
+                          <p>Main objectives of this project was...</p>
+                          <ul>
+                            <li>Provide a Visual experience to the Client the look and feel of 'Museum Stucture.'</li>
+                            <li>Customer would be able to click on items and check the cost.</li>
+                          </ul>
                           </div>
+
+                          <div>
+                            <h3><b>Solar Tracking System</b>-B.Tech Final Year Project</h3>
+                          <p>Main objectives of this project was...</p>
+                          <ul>
+                            <li>To design a prototype of solar tracking system.</li>
+                            <li>To design a project that can detect and compare the intensity of light and</li>
+                            <li>To design a project that is able to move a stepper motor based on the intensity of light and show the voltages across two LDRs on LCD.</li>
+                          </ul>
+                          </div>
+                          <div><p>COMPONENTS</p>
+                            <p>The major components those were used...</p>
+                          <ul>
+                              <li>Microcontroller (ATMEGA 16) </li>
+                              <li>Stepper motor </li>
+                              <li>Motor Drive (L293D) </li>
+                              <li>Voltage regulator ( LM 7805)</li>
+                            <li>Liquid crystal display </li>
+                            <li>Sensors (Light Dependent Resistors)  </li>
+                          </ul>
+                          </div>
+                        </div>
                       </div>
                       <div class="col-md-1"></div>
-                      <div class="col-md-7">
-                          <div>
-                              <img src="images/time.JPG" alt="image is here" width=100%;/>
+                      <div class="col-md-7 xs-p-0">
+                          <div class="project_img">
+                              <img width="100%;" id="1" data-toggle="modal" data-target="#myImageModal" src="images/solarTrackerSystem.png" alt="image is here" />
+                              <figcaption class="text-center"><i>Final prototype</i></figcaption>
+                          </div>
+                          <div class="xs-mt-50 project_img">
+                            <img width="100%;" id="1" data-toggle="modal" data-target="#myImageModal" src="images/proteus-simulation.png" alt="image is here" />
+                              <figcaption class="text-center"><i>Proteus Simulation</i></figcaption>
                           </div>
                       </div>
                       <div class="col-md-2"></div>
@@ -189,10 +222,39 @@
 
 
 </div>
+<div id="myImageModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal_image">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img class="showimage img-responsive" src="" />
+            </div>
+            <div class="modal_footer modal-footer">
+                <button type="button" class="close_btn btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- end of navigation bar -->
 </div>
 <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
 </div>
     <script src="functions.js"></script>
+    <script>
+    // Image open on bootstrap modal
+    $(document).ready(function () {
+        $('img').on('click', function (e) {
+    			 e.preventDefault();
+            var image = $(this).attr('src');
+            //alert(image);
+            $('#myImageModal').on('show.bs.modal', function () {
+                $(".showimage").attr("src", image);
+            });
+        });
+
+    		$('.photo li').click(function(e) {
+    		    $(this).addClass('active').siblings().removeClass('active');
+    		});
+    });
+    </script>
 </body>
 </html>
